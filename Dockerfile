@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 WORKDIR /opt/tk4
 
@@ -6,6 +6,7 @@ RUN apt-get update && \
     apt-get install -y --no-install-recommends \
             unzip \
             wget \
+            c3270 \
             && \
     wget http://wotho.ethz.ch/tk4-/tk4-_v1.00_current.zip && \
     unzip tk4-_v1.00_current.zip && rm tk4-_v1.00_current.zip && \
